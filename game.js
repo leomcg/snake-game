@@ -1,7 +1,7 @@
 import { 
   update as updateSnake, 
   draw as drawSnake, 
-  SNAKE_SPEED 
+  snakeSpeed
 } from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
 import { getSnakeHead, snakeIntersection } from './snake.js'
@@ -25,7 +25,7 @@ if (gameOver) return alert('You lose. Try again!')
 
   window.requestAnimationFrame(main);
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
-  if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
+  if (secondsSinceLastRender < 1 / snakeSpeed) return;
   
   console.log('render');
   lastRenderTime = currentTime;
